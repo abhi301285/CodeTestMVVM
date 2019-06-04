@@ -4,6 +4,7 @@ import dagger.Module;
 import dagger.android.ContributesAndroidInjector;
 import poc.mvvm.viewmodel.data.model.Article;
 import poc.mvvm.viewmodel.ui.article.ArticleActivity;
+import poc.mvvm.viewmodel.ui.book.BookActivity;
 import poc.mvvm.viewmodel.ui.login.LoginActivity;
 import poc.mvvm.viewmodel.ui.userlist.UserListActivity;
 
@@ -18,5 +19,8 @@ public abstract class ActivityBindingModule {
 
     @ContributesAndroidInjector
     abstract ArticleActivity bindArticleActivity();
+
+    @ContributesAndroidInjector
+    abstract BookActivity bindBookActivity();
 
 }

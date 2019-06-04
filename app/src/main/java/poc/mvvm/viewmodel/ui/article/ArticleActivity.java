@@ -37,7 +37,7 @@ public class ArticleActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         viewModel = ViewModelProviders.of(this, viewModelFactory).get(ArticleViewModel.class);
 
-       viewModel.fetchArticles(2015,11, Constants.API_KEY);
+       viewModel.fetchArticles(2013,1, Constants.API_KEY);
        observableViewModel();
     }
 
@@ -47,15 +47,12 @@ public class ArticleActivity extends BaseActivity {
         viewModel.getArticles().observe(this, articleResponse -> {
             if (articleResponse != null) {
                 Toast.makeText(this, "CopyRight === " + articleResponse.getCopyright(), Toast.LENGTH_SHORT).show();
-                //startActivity(new Intent(this, MainActivity.class));
             }
         });
 
         viewModel.getError().observe(this, throwable -> {
             if (throwable != null) {
                 Log.e(TAG, "Error LIst = " + throwable.getLocalizedMessage());
-            } else {
-                Log.e(TAG, "Error Throwable null ");
             }
         });
 

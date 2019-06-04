@@ -10,6 +10,7 @@ import dagger.Module;
 import dagger.multibindings.IntoMap;
 import poc.mvvm.viewmodel.di.util.ViewModelKey;
 import poc.mvvm.viewmodel.ui.article.ArticleViewModel;
+import poc.mvvm.viewmodel.ui.book.BookViewModel;
 import poc.mvvm.viewmodel.ui.login.LoginViewModel;
 import poc.mvvm.viewmodel.ui.userlist.UserListViewModel;
 import poc.mvvm.viewmodel.util.ViewModelFactory;
@@ -35,4 +36,9 @@ public abstract class ViewModelModule {
     @IntoMap
     @ViewModelKey(ArticleViewModel.class)
     abstract ViewModel bindArticleViewModel(ArticleViewModel articleViewModel);
+
+    @Binds
+    @IntoMap
+    @ViewModelKey(BookViewModel.class)
+    abstract ViewModel bindBookViewModel(BookViewModel bookViewModel);
 }

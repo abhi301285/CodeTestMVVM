@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/bookLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/ivBookImage"
+        android:layout_width="@dimen/circular_image_size"
+        android:layout_height="@dimen/circular_image_size"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/margin_10"
+        android:layout_marginRight="@dimen/margin_10"
+        android:src="@drawable/ic_avatar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_gravity="center"
+        android:layout_marginLeft="@dimen/margin_10"
+        android:layout_marginRight="@dimen/margin_10"
+        android:layout_toRightOf="@+id/ivBookImage"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvBookListName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:lines="1"
+            android:text=""
+            android:textColor="@color/black"
+            android:textSize="@dimen/font_15" />
+
+        <TextView
+            android:id="@+id/tvBookDisplayName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:lines="1"
+            android:text=""
+            android:textColor="@color/grey"
+            android:textSize="@dimen/font_13" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/ivBookImage"
+        android:layout_marginTop="@dimen/margin_20"
+        android:background="@color/grey" />
+
+</RelativeLayout>

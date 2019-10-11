@@ -67,6 +67,7 @@ public class BookActivity extends BaseActivity implements BookAdapter.BookSelect
 
         viewModel.getLoading().observe(this, isLoading -> {
             if (isLoading != null) {
+                Log.e(TAG, "Loading  = ");
                 loadingView.setVisibility(isLoading ? View.VISIBLE : View.GONE);
             }
         });
